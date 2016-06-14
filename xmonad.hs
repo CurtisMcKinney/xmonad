@@ -33,7 +33,6 @@ myStartupHook = do
 
 -- ~/.xinitrc
 -- xmodmap ~/.Xmodmap
--- firefox &
 
 -- ~/.Xmodmap
 -- remove Lock = Caps_Lock
