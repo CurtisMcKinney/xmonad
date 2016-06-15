@@ -7,15 +7,16 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.Spacing
 
 main :: IO ()
-main = xmobar xconfig >>= xmonad
+-- main = xmobar xconfig >>= xmonad
+main = xmonad xconfig
 
 xconfig = defaultConfig
         { terminal           = "xfce4-terminal"
         , modMask            = mod4Mask
-        , borderWidth        = 1
+        , borderWidth        = 2
         -- , focusedBorderColor = "#602060"
         , focusedBorderColor = "#704070"
-        , normalBorderColor  = "#404040"
+        , normalBorderColor  = "#505050"
         , manageHook         = myManageHook <+> manageDocks <+> manageHook defaultConfig
         , layoutHook         = myLayout
         , startupHook        = myStartupHook
@@ -32,7 +33,8 @@ myLayout = smartSpacing 12 $ avoidStruts (tallLayout ||| Mirror tallLayout) ||| 
 myStartupHook :: X ()
 myStartupHook = do
     -- spawn "feh --bg-fill /home/casiosk1/Pictures/Samus_vs_Kraid_in_Super_Metroid.jpg"
-    spawn "feh --bg-fill /home/casiosk1/Pictures/maxresdefault.jpg" -- Metroid start screen background
+    -- spawn "feh --bg-fill /home/casiosk1/Pictures/maxresdefault.jpg" -- Metroid start screen background
+    spawn "feh --bg-fill /home/casiosk1/Pictures/metroid_desaturate.jpg" -- Metroid start screen background
     spawn "firefox"
     startupHook defaultConfig
 
