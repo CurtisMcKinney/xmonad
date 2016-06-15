@@ -35,7 +35,8 @@ myStartupHook = do
     -- spawn "feh --bg-fill /home/casiosk1/Pictures/Samus_vs_Kraid_in_Super_Metroid.jpg"
     -- spawn "feh --bg-fill /home/casiosk1/Pictures/maxresdefault.jpg" -- Metroid start screen background
     spawn "feh --bg-fill /home/casiosk1/Pictures/metroid_desaturate.jpg" -- Metroid start screen background
-    spawn "firefox"
+    spawn "pgrep firefox || firefox"
+    spawn "pgrep xcompmgr || xcompmgr -c -C -t-5 -l-5 -r4.2 -o.1"
     startupHook defaultConfig
 
 myLogHook :: X ()
@@ -53,3 +54,4 @@ myLogHook = fadeInactiveLogHook 0.8
 
 --term font: monofur Bold 11
 --term font: Hermit Medium 10
+--term font: peep Medium 10 or maybe Bold?
