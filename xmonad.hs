@@ -16,7 +16,7 @@ xconfig = defaultConfig
         { terminal           = "termite"
         , modMask            = mod4Mask
         , borderWidth        = 2
-        , focusedBorderColor = "#704070"
+        , focusedBorderColor = "#707070"
         , normalBorderColor  = "#505050"
         , manageHook         = myManageHook <+> manageDocks <+> manageHook defaultConfig
         , layoutHook         = myLayout
@@ -62,8 +62,8 @@ myKeys = [ ("<XF86MonBrightnessUp>",   spawn "xbacklight +20")
 
 -- ~/.config/termite/config
 --[options]
---font = peep Medium 11
 --font = Hermit Medium 10
 --
 --[colors]
---background = rgba(0, 0, 0, 0.6)
+--background = rgba(0, 0, 0, 0.7)
+--cursor     = #B03030
